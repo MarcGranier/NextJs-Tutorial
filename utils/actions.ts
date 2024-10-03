@@ -8,6 +8,7 @@ type User = {
     lastName: string;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const createUser = async (prevState: any, formData: FormData) => {
     "use server";
     console.log(prevState);
@@ -49,6 +50,7 @@ export const deleteUser = async (formData: FormData) => {
     revalidatePath("/actions");
 };
 export const removeUser = async (id: string, formData: FormData) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const name = formData.get("name") as string;
     // console.log(name);
 
